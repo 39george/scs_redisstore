@@ -153,6 +153,7 @@ func TestDelete(t *testing.T) {
 	if err != nil && !errors.Is(err, redis.Nil) {
 		t.Fatal(err)
 	}
+
 	if data != nil {
 		t.Fatalf("got %v: expected %v", data, nil)
 	}
